@@ -1,0 +1,59 @@
+{
+  "name": "estamparia-erp-restaurantes",
+  "productName": "Estamparia ERP",
+  "version": "1.0.0",
+  "description": "ERP desktop (Electron + Node.js + PostgreSQL).",
+  "main": "src/main/main.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron ./src/main/main.js",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder -w portable",
+    "build:installer": "electron-builder -w nsis",
+    "build:zip": "electron-builder -w zip",
+    "build:all": "electron-builder -w portable,nsis,zip"
+  },
+  "build": {
+    "appId": "com.suaempresa.estampariaerp",
+    "productName": "Estamparia ERP",
+    "directories": {
+      "output": "dist"
+    },
+    "asar": true,
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      ".env"
+    ],
+    "win": {
+      "icon": "assets/icon.ico",
+      "artifactName": "${productName} ${version} ${arch}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName} ${version} Portable.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "artifactName": "${productName} Setup ${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^37.6.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.34.0",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.3",
+    "googleapis": "^159.0.0",
+    "pg": "^8.16.3",
+    "uuid": "^9.0.1",
+    "xlsx": "^0.18.5"
+  }
+}

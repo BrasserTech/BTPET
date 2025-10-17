@@ -1,0 +1,151 @@
+Documentação da Aplicação – Estamparia ERP
+1. Visão Geral
+
+O Estamparia ERP é um sistema de gestão empresarial desenvolvido para pequenas e médias empresas do ramo de estamparia.
+Ele foi projetado para oferecer uma interface simples e responsiva, com foco na organização de cadastros, controle de entradas/saídas, emissão de relatórios e monitoramento de pedidos e clientes.
+
+A aplicação foi construída em Electron + Node.js, utilizando HTML, CSS e JavaScript no front-end, conectada a um banco de dados PostgreSQL.
+
+2. Estrutura do Sistema
+
+A aplicação é organizada em módulos principais, acessíveis pelo menu lateral:
+
+Cadastrar
+
+Produtos
+
+Clientes
+
+Pedidos
+
+Consultar
+
+Produtos
+
+Clientes
+
+Pedidos
+
+Entradas
+
+Saídas
+
+Relatórios
+
+Faturamento
+
+Faturamento por Cliente
+
+Movimentação de Produtos
+
+Histórico Comercial
+
+Dashboard
+
+Configurações
+
+Perfil
+
+3. Funcionalidades
+3.1 Cadastros
+
+Produtos: Registro de itens com nome, valor de compra/venda, fornecedor e validade.
+
+Clientes: Cadastro de pessoas físicas ou jurídicas, com dados de contato e endereço.
+
+Pedidos: Controle de pedidos realizados, permitindo selecionar clientes, produtos, quantidade e valores.
+
+3.2 Consultas
+
+Filtros dinâmicos para busca de produtos, clientes e pedidos.
+
+Listagens responsivas, com opção de detalhamento dos registros.
+
+Entradas/Saídas: acompanhamento de movimentações de estoque.
+
+3.3 Relatórios
+
+Faturamento: visão geral das receitas.
+
+Faturamento por Cliente: detalhamento por consumidor.
+
+Movimentação de Produtos: análise de entradas e saídas.
+
+Histórico Comercial: consolidação de registros anteriores.
+
+3.4 Configurações
+
+Testar conexão com banco de dados PostgreSQL.
+
+Definir URL de planilhas online (Google Sheets) para integração.
+
+3.5 Perfil
+
+Informações do usuário logado.
+
+Possibilidade de ajustes de credenciais.
+
+4. Arquitetura
+src/
+ ├── main/          # Processos principais do Electron (IPC, banco, serviços)
+ ├── renderer/      # Interface do usuário (views, componentes)
+ │    ├── views/    # Telas (cadastros, consultas, relatórios, etc.)
+ │    ├── styles/   # Arquivos CSS
+ │    └── index.html
+ ├── database/      # Scripts SQL e integração com PostgreSQL
+ ├── shared/        # Funções auxiliares
+ └── router.js      # Gerenciador de rotas entre telas
+
+5. Banco de Dados
+
+O sistema utiliza PostgreSQL como SGBD.
+
+Conexão definida via .env (host, porta, usuário, senha, nome do banco).
+
+Estrutura inicial criada via schema.sql.
+
+As tabelas são acessadas via IPC (Inter-Process Communication) no Electron.
+
+6. Fluxo de Navegação
+
+O usuário acessa o menu lateral.
+
+Ao clicar em uma opção, o router.js carrega a view correspondente no painel central.
+
+Cada view tem função de renderização (render...) e afterRender(), que inicializa eventos (ex.: salvar, limpar, consultar, gerar relatório).
+
+O título da página é atualizado dinamicamente na topbar.
+
+7. Tecnologias Utilizadas
+
+Electron 37.x
+
+Node.js
+
+PostgreSQL 17
+
+HTML5 / CSS3 / JavaScript ES6
+
+IPC (Electron) para comunicação entre front e back
+
+Google Sheets (integração futura) para importação de planilhas
+
+8. Boas Práticas
+
+Não versionar node_modules nem arquivos binários > 100 MB.
+
+Utilizar .gitignore para evitar build artifacts.
+
+Centralizar consultas SQL em database/schema.sql e ipc/.
+
+Usar window.render... para cada view, mantendo consistência de carregamento.
+
+9. Próximos Passos
+
+Implementar autenticação de usuários.
+
+Adicionar gráficos interativos no Dashboard.
+
+Melhorar relatórios exportando para PDF/Excel.
+
+Finalizar integração com Google Sheets para sincronização de pedidos.

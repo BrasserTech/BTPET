@@ -1,0 +1,22 @@
+Caminho A – via “APIs e serviços”
+
+Console do Google Cloud → APIs e serviços → Credenciais.
+
+Na área “Contas de serviço”, clique no e-mail btmonitor@braseiro-470623.iam.gserviceaccount.com
+ ou em “Gerenciar contas de serviço”.
+
+Abre a página da conta. Abra a aba “Chaves”.
+
+Clique em “Adicionar chave” → “Criar nova chave” → escolha JSON → Criar. O arquivo service-account.json será baixado.
+
+Guarde o arquivo com segurança e, se houver chaves antigas, exclua as que não serão mais usadas.
+
+para acessar a estrutura do banco de dados postgre:
+C:\Users\paulo>cd "C:\Program Files\PostgreSQL\17\bin"cd "C:\Program Files\PostgreSQL\17\bin"
+
+gerar estrutura do banco de dados
+cd "C:\Program Files\PostgreSQL\17\bin"
+pg_dump.exe --schema-only -h 127.0.0.1 -p 5432 -U postgres -d postgres --no-owner --encoding=UTF8 > "C:\Users\paulo\Documents\GitHub\MonitorGestaoPedidos\src\database\schema.sql"
+
+
+vai ser gerado aqui C:\Users\paulo

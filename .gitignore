@@ -1,0 +1,25 @@
+# --- Node/Electron ---
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# builds locais / artefatos
+dist/
+out/
+build/
+release/
+*.asar
+
+# Electron baixado pelo pacote
+**/electron/dist/
+
+# configs locais
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

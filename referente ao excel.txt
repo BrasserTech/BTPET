@@ -1,0 +1,18 @@
+-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJVK+vVVDwT0Ck\nRVXulp7y7HEMQOSQiCR2+BsUQhW66h/iM4TxT39TLzx8eaOL/TwL1K0vlYSCuode\nUn4BgetcMYfrR6clGPYVJ3JdDbwumndJpQ5uD1mlWD65fMhK2/Z31fEyYGsRKyMQ\nSZ1d5Pbak2UiwifKMviEWFj88tbzbxP4XpaWwGpxKW3vbVX6hZBLtSAXnCGQ5Fue\nRu2JeWAOcd0aJ9c4El5CzHaVZM6mXQm6fB32EAyYPI6jrRdpjVqGG3VDrNobhyuH\n6gk61zwzW9izb1aNbLC6hzgiFDEEVCpb1KyznvEMNkDtqeC2hLn+SOD3Jh9tbpT1\n3lsIcBgRAgMBAAECggEAD4dvsad0AcUrKECM20VU50njgl1zA87seRy0AgEC6hLq\n+KiepXpLSOBI2xUKz15uBj+WSChRO0Al9tmIDJe3zrmnUTeKperh+Em9oX3QuQuD\nDfQkQ8r9UCqZU/dS/6stvJqM6yTSvVVFdBkpgTeK7tsVnvO42/jIgHTMEF6uw8H3\nk55B76LLUez3yTx2iKZe8dwggtvxsA8haFEetjSYQbAhLsuMBEzm430semBhKWRO\n1cX9BbXMApzd0nxPVMB1TAsoRx7nhawzMCiqqjlsg2zGWQJgpowMcipc27wyWvFJ\n1195TfRHVgA9nA6F6v+sZKDg4S4mH8IW9w6KQLBYkQKBgQDjQ78RomyH5GskA5QY\nkwlo9xgMGvq8VN2eFuBCvUdtHHSJrqVzDeFViIpcbE1SQcn9QtIz/6xT9x4ydDWY\n+lyxCXu5MXftMAyMnXKcLxh83C3ACmM3jKSkgFQTYFoFma6WDl9YHtzhVDoLEZqr\nlLVqw7VE1gXi0QgWKC5OT1eyvQKBgQDiyX8UbmQK0zlDro7bZ4paq7c93oaG6W/Z\n97NJ2cB8RkpcPFLl0YUXftnUf6XQ4HlPg7nGhxXlrkrAfcEJZTlew1lgFuhFKUcF\nzdxQyurr3QPFNjP+i3T+ZBdW42bodaeDwm1ySWwoA10CPUl/s+J7uombhMot0/Hg\n8Smtp5fZ5QKBgAYN/f8oRp/wM/KHreBhunRzcM6RwXBXCnh1v4/HnymHAovQfVPt\nYL14n8cKk5zHZ+w5ZYRBIYQzJzjM48ipkuKckBFFAh7tksgEQdNrZcmdzBI7tJz8\nQD6ptJO3k25mw8H3rA6a8+OE7O7yjx5XHeY0RJYK5ak/TGnatDEd6AY5AoGAWTld\nPfSQd5HSncY3fiqmTDXyyeyakMmWr/K8HvoEuOAOsWsqUjC0ZCIMIYZ2/k7Sa24v\n0OOkwdBoqILRR5kDkTzaFOvuRgePYcE0RLUQ5+r0aMqCekrzpIJMjGq7OgnP9g6w\ncJ5iZvurxA3ItO1Y1cT2DrGXuaABMbav5xpgq+ECgYBPTbl7g0amJZt88jXXNZxW\nbZtmv/rs4VCM9eLJyxIx1FCzhqAf5NlXvUW3eMhsfyCVZZcdwEmGWdJTntTjm0K+\nkwML8d28wqbp53+vYaegcvztMp5vMRVvngkOW492E/prvvg6TDKmegUP0foD56zy\nALlJv0LPe4DTl/SZqzVvRA==\n-----END PRIVATE KEY-----\n
+
+btmonitor@braseiro-470623.iam.gserviceaccount.com
+
+Página2!A2:J
+
+1feZ9CEJEX1wh6kFzCIrcl8pcAyNn-Gg7NKjFDo0K-Dk
+
+
+
+
+
+
+
+Campo	Descrição	Exemplo
+Service Account JSON	Cole aqui o conteúdo do arquivo .json baixado.	{ "type": "service_account", "project_id": "bt-pedidos1", ... }
+Google Sheet ID	É o identificador único da planilha, encontrado na URL entre /d/ e /edit.	Para https://docs.google.com/spreadsheets/d/1EVndhPCxt_29j_HhwP_ytuOuGGI7mgmi-xJ-OQDFbc4/edit#gid=0, o ID é 1EVndhPCxt_29j_HhwP_ytuOuGGI7mgmi-xJ-OQDFbc4.
+Range	Indica o nome da aba e o intervalo de células que o sistema deve usar.	Página1!A2:J (ou substitua “Página1” pelo nome da aba
